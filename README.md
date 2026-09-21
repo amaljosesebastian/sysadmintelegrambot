@@ -134,7 +134,31 @@ Before configuring your environment, you need a Telegram Bot Token and your priv
    - Choose a unique username ending in `bot` or `_bot` (e.g., `my_server_sys_bot`).
 3. BotFather will provide an HTTP **API Token** (a string like `123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ`). Copy this down for `TELEGRAM_TOKEN` in your `.env`.
 
-### 2. Get Your Private Chat ID (`ALLOWED_CHAT_ID`)
+### 2. Set Up the Command Menu
+To make commands easily accessible via Telegram's menu button, register them with BotFather:
+1. Open your chat with **[BotFather](https://t.me/BotFather)**.
+2. Send the command `/mybots` and select your bot from the list.
+3. Tap **Edit Bot** -> **Edit Commands**.
+4. Send the list of commands in the following format (one per line):
+   ```text
+   start - Show the command menu
+   status - Uptime, memory and root disk usage
+   health - Run every health check now
+   tasks - Show when the next scheduled tasks will run
+   ram - RAM usage dashboard
+   storage - Disk usage dashboard
+   docker - Docker container status
+   services - Failed systemd services
+   logs - Recent system logs
+   exec - Run a command subject to policy
+   update - Check for dnf updates
+   reboot - Reboot the host
+   remember - Save a persistent note
+   notes - List saved notes
+   forget - Delete a saved note
+   reset - Clear conversation history
+
+### 3. Get Your Private Chat ID (`ALLOWED_CHAT_ID`)
 Because your bot manages server infrastructure, it must be locked to your personal account so no one else can interact with it.
 1. Search for **[@userinfobot](https://t.me/userinfobot)** on Telegram.
 2. Send it any message (like `/start`).
