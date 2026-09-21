@@ -123,13 +123,30 @@ Commands typed with `/exec`, or proposed by the AI model, pass through `commandp
 4. **Ollama** running locally with a tool-calling capable model (e.g. `llama3.2:3b` or `llama3.1:8b`).
 5. **Passwordless sudo** for a few exact commands (see [Sudo setup](#sudo-setup)).
 
+## Creating your Telegram Bot & Getting Credentials
+
+Before configuring your environment, you need a Telegram Bot Token and your private Chat ID.
+
+### 1. Create a Bot and Get Your Token (`TELEGRAM_TOKEN`)
+1. Open Telegram and search for the official **[BotFather](https://t.me/BotFather)**.
+2. Send the command `/newbot` and follow the prompts:
+   - Provide a friendly display name for your bot (e.g., `My SysAdmin Bot`).
+   - Choose a unique username ending in `bot` or `_bot` (e.g., `my_server_sys_bot`).
+3. BotFather will provide an HTTP **API Token** (a string like `123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ`). Copy this down for `TELEGRAM_TOKEN` in your `.env`.
+
+### 2. Get Your Private Chat ID (`ALLOWED_CHAT_ID`)
+Because your bot manages server infrastructure, it must be locked to your personal account so no one else can interact with it.
+1. Search for **[@userinfobot](https://t.me/userinfobot)** on Telegram.
+2. Send it any message (like `/start`).
+3. The bot will reply with your user details, including your **Id** (a sequence of numbers like `0123456789`). Copy this number for `ALLOWED_CHAT_ID` in your `.env`.
+
 ## Installation
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/yourusername/sysadmin-telegram-bot.git
-   cd sysadmin-telegram-bot
+```bash
+   git clone [https://github.com/amaljosesebastian/sysadmintelegrambot.git](https://github.com/amaljosesebastian/sysadmintelegrambot.git)
+   cd sysadmintelegrambot
    ```
 
 2. **Install dependencies:**
