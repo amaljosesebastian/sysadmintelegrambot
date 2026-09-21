@@ -1,3 +1,6 @@
+<img width="653" height="580" alt="Screenshot From 2026-09-20 21-43-43" src="https://github.com/user-attachments/assets/eea246a0-5cc7-4d09-b7bc-88364f90d74b" />
+<img width="641" height="328" alt="Screenshot From 2026-09-20 21-41-03" src="https://github.com/user-attachments/assets/9b590522-c84e-42bf-be92-e8217d052c75" />
+<img width="637" height="690" alt="Screenshot From 2026-09-20 21-40-39" src="https://github.com/user-attachments/assets/a060b80d-1731-476a-8854-9a3c661f0176" />
 # SysAdmin AI Telegram Bot
 
 A personal AI assistant for Linux server administration that runs in Telegram. It connects natural-language messages to your local **Ollama** instance, runs commands on the host under a safety policy, watches the server in the background, and reports to you when something needs attention.
