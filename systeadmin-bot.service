@@ -1,0 +1,19 @@
+[Unit]
+Description=SysAdmin Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+# Update this path to where you cloned the repository
+WorkingDirectory=/opt/sysadmin-telegram-bot
+# This loads the .env file containing API keys securely
+EnvironmentFile=/opt/sysadmin-telegram-bot/.env
+
+# Update the path to your python environment
+ExecStart=/usr/bin/python3 telegram_bridge.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
